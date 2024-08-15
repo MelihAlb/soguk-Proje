@@ -1,0 +1,27 @@
+*Kullanıcı topic ve entry postlaması hakkında *  /13.08.24/
+*şimdilik 3 schema var -user     bu üç schema birbirine bağımlı ve aralarındaki ilişki sağlandı. Mesela bir topic olmadan entry girişi olmuyor.(++başlık yoksa yorum yok++)
+                       -topic
+                       -entry     *ER Diyagramı çizmeye çalıştım*  
+                       
+                       
+                       
+                       
+*USER*
+*Id ile kullanıcının bütün -contentleri
+                           -entries
+                           -topics 'ler döndürülüyor
+
+*Kullanıcı register aşamasında*
+*Bu aşamada kullanıcının unique nick ve email girmesi gibi zorunluluklar var
+ (daha fazla zorunluluk için : src\middlewares\validation.js\authValidation.js yolundaki dosyaya bakınız );
+
+
+*Kullanıcı Login aşamasında* /15.08.24/
+*Bu aşamada kullanıcıya bir token oluşturmyaı başardım bu token sayesinde *Kullanıcı Girişi yapılmadan 
+                                                                                                        -Topic veya Entry yazılması engelleniyor 
+                                                                                                        - ayrıca token ile ilgili key ve çözümleme modeli .env dosyasında yer alıyor 
+                                                                                                         (token gelişim aşamasında)
+
+*validasyon kuralları ekledim middlewares içerisinde bulunuyor yapılacak işlemlerin belirli kurallar çerçevesinde olması sağlanıyor
+
+    
